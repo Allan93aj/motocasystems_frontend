@@ -2,7 +2,7 @@ import styles from "./Busca.module.scss"
 
 function Busca() {
   return (
-    <div>Busca</div>
+    <div>Busca 123</div>
   )
 }
 
