@@ -1,3 +1,29 @@
-.busca{
-    color: red;
+/* Busca.module.scss */
+
+.searchContainer {
+    margin: 10px 0;
+    display: flex;
+    justify-content: end;
+
+    svg{
+      color: #fff;
+      position: relative;
+      left: 25px;
+      top: 8px;
+    }
+
+  .searchInput {
+    padding: 10px 35px;
+    font-size: 12px;
+    height: 35px;
+    border: 1px solid rgba(202, 201, 205, 1);
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+    background: transparent;
+    color: #fff;
+  }
+
+
 }
+  

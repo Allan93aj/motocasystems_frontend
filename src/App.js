@@ -1,16 +1,22 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store/store';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Atualizado
+import Novoregistro from './Components/Novoregistro/Novoregistro'
 import Home from './Components/Home/Home';
-import Novoregistro from './Components/Novoregistro/Novoregistro';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes >
-        <Route path="/" element={<Home/>} />
-        <Route path="/novoregistro" element={<Novoregistro/>} />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/novoregistro" element={<Novoregistro/>} />
+          </Routes>
+        </div>
+      </Router>
+    </Provider>
   );
 }
 
