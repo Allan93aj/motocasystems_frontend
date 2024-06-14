@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -85,7 +86,7 @@ function Home() {
                 </td>
                 <td className={styles.editar}>
                   <button>
-                  <img src={Editar}/>
+                    <img src={Editar}/>
                   </button>
                 </td>
               </tr>
