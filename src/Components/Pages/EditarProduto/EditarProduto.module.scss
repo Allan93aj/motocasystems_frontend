@@ -1,13 +1,14 @@
-/* NovoRegistro.module.scss */
+@import '../../../styles/breakpoints';
+
+$white: #fff;
 
 
-.registros{
-    color: #fff;
+.editar{
     padding: 20px;
-    
-    h2{
+    color: $white;
+    h1{
         font-size: 25px;
-        margin-bottom: 10px;
+        font-weight: 600;
     }
 
     .col-form{
@@ -16,12 +17,21 @@
             font-size: 25px;
             text-align: center;
             padding: 30px;
+            font-weight: 600;
         }
     }
 
     .container-form{
-        width: 50%;
+        width: 35%;
         margin: 0 auto;
+        .labelcodigo label{
+            color: rgba(231, 227, 252, 0.5);
+        }
+        .labelcodigo input{
+            border: 1px solid rgba(231, 227, 252, 0.5);
+            color: rgba(231, 227, 252, 0.5);
+           
+        }
         form {
             display: flex;
             flex-direction: column;
@@ -34,6 +44,7 @@
             background: rgba(42, 35, 60, 1);
             padding: 0 10px;
           }
+          
       
           input,
           select {
@@ -45,6 +56,12 @@
             color: #fff;
             background: transparent;
             height: 60px;
+            width: 100%;
+            text-transform: uppercase;
+          }
+
+          select{
+            text-transform: inherit;
           }
 
           select {
@@ -69,8 +86,7 @@
       
           button {
             margin-top: 15px;
-            padding: 10px;
-            background-color: rgba(59, 173, 251, 1);
+            background-color: rgb(59, 173, 251);
             color: white;
             padding: 10px 20px;
             border: none;
@@ -79,10 +95,17 @@
             font-size: 16px;
             transition: background-color 0.3s ease;
             height: 60px;
-      
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
             &:hover {
               background-color: #0056b3;
             }
           }
     }
+    
+    
+
 }

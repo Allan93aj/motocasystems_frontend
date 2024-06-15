@@ -1,23 +1,24 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import store from './store/store';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Atualizado
-import Novoregistro from './Components/Novoregistro/Novoregistro'
-import Home from './Components/Home/Home';
+import Home from './Components/Pages/Home/Home'
+import store from './redux/store'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Novoregistro from './Components/Pages/Registrar/Novoregistro'
+import EditarProduto from './Components/Pages/EditarProduto/EditarProduto'
+import { Provider } from 'react-redux'
 
 function App() {
   return (
     <Provider store={store}>
-      <Router>
+        <Router>
         <div className="App">
-          <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/novoregistro" element={<Novoregistro/>} />
-          </Routes>
-        </div>
-      </Router>
+            <Routes>
+                <Route path="/" element={<Home />} ></Route>
+                <Route path="/novoregistro" element={<Novoregistro/>} ></Route>
+                <Route path="/editar/:id" element={<EditarProduto/>} ></Route>
+            </Routes>
+            </div>
+        </Router>
     </Provider>
-  );
+  )
 }
 
-export default App;
+export default App

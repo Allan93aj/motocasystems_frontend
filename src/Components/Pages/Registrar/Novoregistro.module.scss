@@ -1,0 +1,92 @@
+/* NovoRegistro.module.scss */
+
+
+.registros{
+    color: #fff;
+    padding: 20px;
+    
+    h2{
+        font-size: 25px;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .col-form{
+        padding-top: 50px ;
+        h2{
+            font-size: 25px;
+            text-align: center;
+            padding: 25px;
+        }
+    }
+
+    .container-form{
+        width: 50%;
+        margin: 0 auto;
+        form {
+            display: flex;
+            flex-direction: column;
+        }label {
+            font-size: 13px;
+            width: fit-content;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            background: rgba(42, 35, 60, 1);
+            padding: 0 10px;
+          }
+      
+          input,
+          select {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #fff;
+            background: transparent;
+            height: 60px;
+            width: 100%;
+            text-transform: uppercase;
+          }
+
+          select {
+            text-transform: inherit;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23fff' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 8px 10px;
+            padding-right: 30px; /* Espaço para a seta */
+          }
+    
+          option {
+            background-color: rgba(42, 35, 60, 1); /* Fundo escuro para opções */
+            color: #fff; /* Cor do texto */
+          }
+      
+          .form-control {
+            width: 100%;
+          }
+      
+          button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: rgba(59, 173, 251, 1);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            height: 60px;
+            width: 100%;
+            &:hover {
+              background-color: #0056b3;
+            }
+          }
+    }
+}

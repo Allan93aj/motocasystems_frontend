@@ -1,11 +1,3 @@
 {
-    "tabelas": [
-      {
-        "codigo": "#001",
-        "modelo": "HONDA POP 110I",
-        "cor": "Branca",
-        "valor": "15.000,00",
-        "status": "Em estoque"
-      }
-    ]
-  }
+  "tabelas": []
+}

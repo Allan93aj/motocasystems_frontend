@@ -1,0 +1,124 @@
+@import '../../../styles/breakpoints';
+
+$white: #fff;
+$green: rgba(53, 69, 70, 1);
+$red: rgba(85, 48, 76, 1);
+$orange: rgba(84, 65, 70, 1);
+
+.lista-produtos{
+    padding: 20px;
+    .nav{
+        display: grid;
+        grid-template-columns: 2fr 4fr 1fr;
+        align-items: center;
+        .logo h2{
+            font-size: 25px;
+            color: $white;
+            font-weight: 600;
+        }
+        .registrobtn{
+            background: rgb(59, 173, 251);
+            color: #fff;
+            font-weight: 600;
+            font-size: 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            width: 142px;
+            height: 34px;
+            margin: 0 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+    }
+
+    .table{
+        width: 100%;
+    .tbody{
+        display: flex;
+        flex-direction: column;
+        .tcard{
+            display: grid;
+            grid-template-columns: 225px fit-content(50%) 1fr;
+            background: rgba(49, 45, 75, 1);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            grid-gap: 10px;
+            color: #fff;
+            .codigo{
+                grid-column: 1;
+                grid-row: 1 / 4;
+                text-align: center;
+                display: grid;
+                align-items: center;
+                color: rgba(140, 87, 255, 1);
+            }
+            .modelo{
+                grid-column: 2;
+                grid-row: 1;
+                width: fit-content;
+                text-transform: uppercase;
+            }
+            .cor{
+                grid-column: 2;
+                grid-row: 3;
+            }
+            .valor{
+                grid-column: 2;
+                grid-row: 2;
+            }
+            .status{
+                grid-column: 3;
+                grid-row: 1;
+                width: fit-content;
+                padding: 0 10px;
+                border-radius: 35px;
+            }
+            .excluir{
+                grid-column: 4;
+                grid-row: 1 / 4;
+                text-align: center;
+                display: grid;
+                align-items: center;
+                button{
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+            .editar{
+                grid-column: 5;
+                grid-row: 1 / 5;
+                text-align: center;
+                display: grid;
+                align-items: center;
+                margin: 10px;
+                button{
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    
+        // Estilos de status
+      .in-stock {
+        background-color: $green;
+        color: rgba(86, 202, 0, 1);
+      }
+    
+      .out-of-stock {
+        background-color: $red;
+        color: rgba(255, 76, 81, 1);
+      }
+    
+      .in-transit {
+        background-color: $orange;
+        color: rgba(255, 180, 0, 1);
+      }
+    }
+}
+}
