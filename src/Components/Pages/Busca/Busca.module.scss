@@ -1,15 +1,29 @@
-/* Busca.module.scss */
+@import '../../../styles/breakpoints';
 
 .searchContainer {
     margin: 10px 0;
     display: flex;
     justify-content: end;
+    @media(max-width: $tablet) {
+      
+    }
+    @media(max-width: $mobile-sm) {
+      position: relative;
+    }
 
     svg{
       color: #fff;
       position: relative;
       left: 25px;
       top: 8px;
+      @media(max-width: $tablet) {
+      
+      }
+      @media(max-width: $mobile-sm) {
+        position: absolute;
+        left: 7px;
+        top: 10px;
+      }
     }
 
   .searchInput {

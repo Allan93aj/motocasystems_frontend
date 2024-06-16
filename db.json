@@ -1,3 +1,25 @@
 {
-  "tabelas": []
+  "tabelas": [
+    {
+      "id": "0001",
+      "modelo": "HONDA POP 110I",
+      "cor": "branca",
+      "valor": "15.000,00",
+      "status": "Em estoque"
+    },
+    {
+      "id": "0002",
+      "modelo": "honda 500x",
+      "cor": "vermelha",
+      "valor": "50.000,00",
+      "status": "Sem estoque"
+    },
+    {
+      "id": "0003",
+      "modelo": "honda 160 start",
+      "cor": "verde",
+      "valor": "15.000,00",
+      "status": "Em trânsito"
+    }
+  ]
 }

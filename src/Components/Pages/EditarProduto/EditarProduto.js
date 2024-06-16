@@ -7,6 +7,7 @@ export default function EditarProduto() {
 
     const params = useParams()
     const [initialData, setInitialData] = useState()
+    const [isModalVisible, setIsModalVisible] = useState(false);
     const [validationErrors, setValidationErrors] = useState({});
     const navigate = useNavigate();
 
@@ -46,8 +47,7 @@ export default function EditarProduto() {
       const data = await response.json();
 
       if (response.ok) {
-        alert('Produto editado com sucesso!');
-        navigate('/');
+        setIsModalVisible(true);
       } else if (response.status === 400) {
         setValidationErrors(data);
       } else {
@@ -68,6 +68,11 @@ export default function EditarProduto() {
   function handleValueChange(e) {
     const { value } = e.target;
     e.target.value = formatCurrency(value);
+  }
+
+  function closeModal() {
+    setIsModalVisible(false);
+    navigate('/');
   }
 
   return (
@@ -110,7 +115,7 @@ export default function EditarProduto() {
             <div>
               <label>Valor</label>
               <div>
-              <input type="text" className="form-control" name="valor" defaultValue={initialData.valor} onInput={handleValueChange} />
+              <input type="text" className="form-control" name="valor" defaultValue={initialData.valor} onInput={handleValueChange} required/>
                 <span>{validationErrors.valor}</span>
               </div>
             </div>
@@ -137,6 +142,14 @@ export default function EditarProduto() {
         </div>
         </div>
       </div>
+      {isModalVisible && (
+        <div className={styles.modal}>
+          <div className={styles.modalContent}>
+            <h2>Produto editado com sucesso!</h2>
+            <button onClick={closeModal}>OK</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

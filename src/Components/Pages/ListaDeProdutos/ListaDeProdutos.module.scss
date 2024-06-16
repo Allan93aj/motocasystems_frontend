@@ -11,6 +11,20 @@ $orange: rgba(84, 65, 70, 1);
         display: grid;
         grid-template-columns: 2fr 4fr 1fr;
         align-items: center;
+        @media(max-width: $tablet) {
+            
+          }
+          @media(max-width: $mobile-sm) {
+            grid-template-areas:
+            "logo"
+            "containerbusca"
+            "registro";
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            text-align: center;
+          }
+
+
         .logo h2{
             font-size: 25px;
             color: $white;
@@ -31,6 +45,13 @@ $orange: rgba(84, 65, 70, 1);
             align-items: center;
             justify-content: center;
             gap: 5px;
+            @media(max-width: $tablet) {
+                // padding-top: 250px;
+              }
+              @media(max-width: $mobile-sm) {
+                margin: 0;
+                width: 100%;
+              }
         }
     }
 
@@ -48,6 +69,12 @@ $orange: rgba(84, 65, 70, 1);
             border-radius: 8px;
             grid-gap: 10px;
             color: #fff;
+            @media(max-width: $tablet) {
+            }
+            @media(max-width: $mobile-sm) {
+                grid-template-columns: 0fr 1fr fit-content(100%);
+                margin: 10px 0;
+            }
             .codigo{
                 grid-column: 1;
                 grid-row: 1 / 4;
@@ -55,20 +82,35 @@ $orange: rgba(84, 65, 70, 1);
                 display: grid;
                 align-items: center;
                 color: rgba(140, 87, 255, 1);
+                @media(max-width: $tablet) {
+                }
+                @media(max-width: $mobile-sm) {
+                    grid-row: 1;
+                    display: flex;
+                    align-items: flex-start;
+                    line-height: 20px;
+                }
             }
             .modelo{
                 grid-column: 2;
                 grid-row: 1;
                 width: fit-content;
                 text-transform: uppercase;
+                @media(max-width: $tablet) {
+                }
+                @media(max-width: $mobile-sm) {
+                  line-height: 20px;
+                }
             }
             .cor{
                 grid-column: 2;
                 grid-row: 3;
+                width: fit-content;
             }
             .valor{
                 grid-column: 2;
                 grid-row: 2;
+                width: fit-content;
             }
             .status{
                 grid-column: 3;
@@ -76,6 +118,13 @@ $orange: rgba(84, 65, 70, 1);
                 width: fit-content;
                 padding: 0 10px;
                 border-radius: 35px;
+                @media(max-width: $tablet) {
+                }
+                @media(max-width: $mobile-sm) {
+                  padding: 0 5px;
+                  font-size: 12px;
+                  height: 20px;
+                }
             }
             .excluir{
                 grid-column: 4;
@@ -83,6 +132,15 @@ $orange: rgba(84, 65, 70, 1);
                 text-align: center;
                 display: grid;
                 align-items: center;
+                @media(max-width: $tablet) {
+                }
+                @media(max-width: $mobile-sm) {
+                    grid-column: 3;
+                    grid-row: 3;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                }
                 button{
                     background: none;
                     border: none;
@@ -96,6 +154,19 @@ $orange: rgba(84, 65, 70, 1);
                 display: grid;
                 align-items: center;
                 margin: 10px;
+                @media(max-width: $tablet) {
+                }
+                @media(max-width: $mobile-sm) {
+                    grid-column: 1;
+                    grid-row: 3;
+                    display: flex;
+                    margin: 0;
+                }
+                a{
+                    @media(max-width: $mobile-sm) {
+                        display: flex;
+                    }
+                }
                 button{
                     background: none;
                     border: none;
@@ -122,3 +193,24 @@ $orange: rgba(84, 65, 70, 1);
     }
 }
 }
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loader {
+    animation: spin 1s linear infinite;
+  }
+  
+  .excluir {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

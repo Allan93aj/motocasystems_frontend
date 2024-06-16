@@ -5,7 +5,18 @@ import Header from "../Header/Header";
 
 export default function Novoregistro() {
   const [validationErrors, setValidationErrors] = useState({});
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const navigate = useNavigate();
+
+  async function checkIfIdExists(id) {
+    try {
+      const response = await fetch(`http://localhost:5000/tabelas/${id}`);
+      return response.ok;
+    } catch (error) {
+      console.error('Erro ao verificar ID:', error);
+      return false;
+    }
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -13,8 +24,8 @@ export default function Novoregistro() {
     const formData = new FormData(e.target);
     const produto = Object.fromEntries(formData.entries());
 
-     // Simulação de verificação se o ID já existe (você deve adaptar isso à sua lógica real)
-     if (produto.id === 'alguma_logica_para_verificar_id') {
+    const idExists = await checkIfIdExists(produto.id);
+    if (idExists) {
       setValidationErrors({ id: 'ID já existe. Escolha outro ID.' });
       return;
     }
@@ -31,8 +42,7 @@ export default function Novoregistro() {
       const data = await response.json();
 
       if (response.ok) {
-        alert('Produto cadastrado com sucesso!');
-        navigate('/');
+        setIsModalVisible(true);
       } else if (response.status === 400) {
         setValidationErrors(data);
       } else {
@@ -54,7 +64,10 @@ export default function Novoregistro() {
     const { value } = e.target;
     e.target.value = formatCurrency(value);
   }
-
+  function closeModal() {
+    setIsModalVisible(false);
+    navigate('/');
+  }
 
 
   return (
@@ -75,7 +88,7 @@ export default function Novoregistro() {
               <label>Código</label>
               <div>
                 <input className="form-control" name="id" placeholder="#" required/>
-                <span>{validationErrors.id}</span>
+                <span className={styles.idexiste}>{validationErrors.id}</span>
               </div>
             </div>
             <div>
@@ -117,6 +130,14 @@ export default function Novoregistro() {
           
         </div>
       </div>
+      {isModalVisible && (
+        <div className={styles.modal}>
+          <div className={styles.modalContent}>
+            <h2>Produto cadastrado com sucesso!</h2>
+            <button onClick={closeModal}>OK</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
