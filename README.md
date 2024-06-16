@@ -6,11 +6,8 @@ Este projeto consiste em uma aplicação web que permite operações CRUD (Creat
 
 ## Deploy da aplicação na Vercel.
 
-Deploy your own Create React App project with Vercel.
+https://motocasystemsfrontend-git-main-allan-andrade-de-jesus-projects.vercel.app/
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/create-react-app&template=create-react-app)
-
-_Live Example: https://create-react-template.vercel.app/_
 
 ## Available Scripts
 
