@@ -1,8 +1,10 @@
-# Create React App
 
-This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
+<h2>Aplicação CRUD com React, JavaScript, SASS e Redux para Pesquisa Dinâmica </h2>
 
-## Deploy Your Own
+Este projeto consiste em uma aplicação web que permite operações CRUD (Create, Read, Update, Delete) utilizando as tecnologias React e JavaScript. A estilização é feita com SASS, proporcionando uma interface moderna e responsiva. A gerência de estado é centralizada com Redux, assegurando uma manipulação eficiente dos dados. A funcionalidade de pesquisa dinâmica é integrada, permitindo aos usuários localizar registros de forma rápida e precisa.
+
+
+## Deploy da aplicação na Vercel.
 
 Deploy your own Create React App project with Vercel.
 
@@ -16,16 +18,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Executa o aplicativo no modo de desenvolvimento. Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo em seu navegador. 
 
-The page will reload when you make changes. You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.
-
-It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
+### `json-server --watch db.json --port 5000`
+Para ser executado o banco de dados no Json-server
